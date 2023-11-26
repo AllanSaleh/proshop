@@ -11,6 +11,7 @@ import {
 } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
+import Message from '../components/Message';
 import { useGetProductDetailsQuery } from '../slices/productsApiSlice';
 
 const ProductScreen = () => {
@@ -30,7 +31,9 @@ const ProductScreen = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <div>{error?.data?.message || error.error}</div>
+        <Message variant='danger'>
+          {error?.data?.message || error.error}
+        </Message>
       ) : (
         <Row>
           <Col md={5}>
