@@ -14,9 +14,10 @@ export const ordersApiSlice = apiSlice.injectEndpoints({
       query: (orderId) => ({
         url: `${ORDERS_URL}/${orderId}`,
       }),
-      keepUnusedDataFor: 5
+      keepUnusedDataFor: 5,
     }),
   }),
 });
 
-export const { useCreateOrderMutation, useGetOrderDetailsQuery } = ordersApiSlice;
+export const { useCreateOrderMutation, useGetOrderDetailsQuery } =
+  ordersApiSlice;
