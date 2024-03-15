@@ -9,6 +9,7 @@ export default defineConfig({
         target: 'http://localhost:5000',
         secure: false,
       },
+      '/uploads': 'http://localhost:5000',
     },
   },
   plugins: [react()],
